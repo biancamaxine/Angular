@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Comfortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  margin: 0; padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.__flex {
+  display: flex;
+
+  &-column {
+    @extend .__flex;
+    flex-direction: column;
+
+    &.__reverse { flex-direction: column-__reverse; }
+  }
+
+  &-row {
+    @extend .__flex;
+    flex-direction: row;
+
+    &.__reverse { flex-direction: row-reverse; }
+  }
+
+  &.__centred {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.__auto { flex: 1 1 auto; }
+}
